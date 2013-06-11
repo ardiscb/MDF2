@@ -1,0 +1,338 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FAA21C231766961400A5A65C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA21C221766961400A5A65C /* UIKit.framework */; };
+		FAA21C251766961400A5A65C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA21C241766961400A5A65C /* Foundation.framework */; };
+		FAA21C271766961400A5A65C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA21C261766961400A5A65C /* CoreGraphics.framework */; };
+		FAA21C2D1766961400A5A65C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAA21C2B1766961400A5A65C /* InfoPlist.strings */; };
+		FAA21C2F1766961400A5A65C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA21C2E1766961400A5A65C /* main.m */; };
+		FAA21C331766961400A5A65C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA21C321766961400A5A65C /* AppDelegate.m */; };
+		FAA21C351766961400A5A65C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA21C341766961400A5A65C /* Default.png */; };
+		FAA21C371766961400A5A65C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA21C361766961400A5A65C /* Default@2x.png */; };
+		FAA21C391766961400A5A65C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA21C381766961400A5A65C /* Default-568h@2x.png */; };
+		FAA21C3C1766961400A5A65C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA21C3B1766961400A5A65C /* ViewController.m */; };
+		FAA21C3F1766961400A5A65C /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA21C3D1766961400A5A65C /* ViewController.xib */; };
+		FAA21C4917669FF000A5A65C /* CustomCollectionCellViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA21C4717669FF000A5A65C /* CustomCollectionCellViewController.xib */; };
+		FAA21C4C1766A0DE00A5A65C /* CustomCollectionCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA21C4B1766A0DE00A5A65C /* CustomCollectionCellView.m */; };
+		FAA21C561766AF3100A5A65C /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA21C551766AF3100A5A65C /* Social.framework */; };
+		FAA21C581766AF3600A5A65C /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA21C571766AF3600A5A65C /* Accounts.framework */; };
+		FAA21C5B1766C65A00A5A65C /* FollowerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA21C5A1766C65A00A5A65C /* FollowerInfo.m */; };
+		FAA21C5D1766DBC400A5A65C /* twitterFriendsLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA21C5C1766DBC400A5A65C /* twitterFriendsLogo.png */; };
+		FAA21C611766DCE700A5A65C /* twitterFriendsLogo_small.png in Resources */ = {isa = PBXBuildFile; fileRef = FAA21C601766DCE700A5A65C /* twitterFriendsLogo_small.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FAA21C1F1766961400A5A65C /* TwitterFriendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterFriendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAA21C221766961400A5A65C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		FAA21C241766961400A5A65C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FAA21C261766961400A5A65C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FAA21C2A1766961400A5A65C /* TwitterFriendsApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TwitterFriendsApp-Info.plist"; sourceTree = "<group>"; };
+		FAA21C2C1766961400A5A65C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FAA21C2E1766961400A5A65C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAA21C301766961400A5A65C /* TwitterFriendsApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TwitterFriendsApp-Prefix.pch"; sourceTree = "<group>"; };
+		FAA21C311766961400A5A65C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAA21C321766961400A5A65C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAA21C341766961400A5A65C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		FAA21C361766961400A5A65C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		FAA21C381766961400A5A65C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		FAA21C3A1766961400A5A65C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FAA21C3B1766961400A5A65C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FAA21C3E1766961400A5A65C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		FAA21C4717669FF000A5A65C /* CustomCollectionCellViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCollectionCellViewController.xib; sourceTree = "<group>"; };
+		FAA21C4A1766A0DE00A5A65C /* CustomCollectionCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionCellView.h; sourceTree = "<group>"; };
+		FAA21C4B1766A0DE00A5A65C /* CustomCollectionCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionCellView.m; sourceTree = "<group>"; };
+		FAA21C551766AF3100A5A65C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		FAA21C571766AF3600A5A65C /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		FAA21C591766C65A00A5A65C /* FollowerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowerInfo.h; sourceTree = "<group>"; };
+		FAA21C5A1766C65A00A5A65C /* FollowerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowerInfo.m; sourceTree = "<group>"; };
+		FAA21C5C1766DBC400A5A65C /* twitterFriendsLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterFriendsLogo.png; sourceTree = "<group>"; };
+		FAA21C601766DCE700A5A65C /* twitterFriendsLogo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitterFriendsLogo_small.png; path = ../twitterFriendsLogo_small.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAA21C1C1766961400A5A65C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA21C581766AF3600A5A65C /* Accounts.framework in Frameworks */,
+				FAA21C561766AF3100A5A65C /* Social.framework in Frameworks */,
+				FAA21C231766961400A5A65C /* UIKit.framework in Frameworks */,
+				FAA21C251766961400A5A65C /* Foundation.framework in Frameworks */,
+				FAA21C271766961400A5A65C /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAA21C161766961400A5A65C = {
+			isa = PBXGroup;
+			children = (
+				FAA21C281766961400A5A65C /* TwitterFriendsApp */,
+				FAA21C211766961400A5A65C /* Frameworks */,
+				FAA21C201766961400A5A65C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAA21C201766961400A5A65C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAA21C1F1766961400A5A65C /* TwitterFriendApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAA21C211766961400A5A65C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAA21C571766AF3600A5A65C /* Accounts.framework */,
+				FAA21C551766AF3100A5A65C /* Social.framework */,
+				FAA21C221766961400A5A65C /* UIKit.framework */,
+				FAA21C241766961400A5A65C /* Foundation.framework */,
+				FAA21C261766961400A5A65C /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAA21C281766961400A5A65C /* TwitterFriendsApp */ = {
+			isa = PBXGroup;
+			children = (
+				FAA21C601766DCE700A5A65C /* twitterFriendsLogo_small.png */,
+				FAA21C5C1766DBC400A5A65C /* twitterFriendsLogo.png */,
+				FAA21C311766961400A5A65C /* AppDelegate.h */,
+				FAA21C321766961400A5A65C /* AppDelegate.m */,
+				FAA21C3A1766961400A5A65C /* ViewController.h */,
+				FAA21C3B1766961400A5A65C /* ViewController.m */,
+				FAA21C3D1766961400A5A65C /* ViewController.xib */,
+				FAA21C591766C65A00A5A65C /* FollowerInfo.h */,
+				FAA21C5A1766C65A00A5A65C /* FollowerInfo.m */,
+				FAA21C4A1766A0DE00A5A65C /* CustomCollectionCellView.h */,
+				FAA21C4B1766A0DE00A5A65C /* CustomCollectionCellView.m */,
+				FAA21C4717669FF000A5A65C /* CustomCollectionCellViewController.xib */,
+				FAA21C291766961400A5A65C /* Supporting Files */,
+			);
+			path = TwitterFriendsApp;
+			sourceTree = "<group>";
+		};
+		FAA21C291766961400A5A65C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FAA21C2A1766961400A5A65C /* TwitterFriendsApp-Info.plist */,
+				FAA21C2B1766961400A5A65C /* InfoPlist.strings */,
+				FAA21C2E1766961400A5A65C /* main.m */,
+				FAA21C301766961400A5A65C /* TwitterFriendsApp-Prefix.pch */,
+				FAA21C341766961400A5A65C /* Default.png */,
+				FAA21C361766961400A5A65C /* Default@2x.png */,
+				FAA21C381766961400A5A65C /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAA21C1E1766961400A5A65C /* TwitterFriendsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAA21C421766961400A5A65C /* Build configuration list for PBXNativeTarget "TwitterFriendsApp" */;
+			buildPhases = (
+				FAA21C1B1766961400A5A65C /* Sources */,
+				FAA21C1C1766961400A5A65C /* Frameworks */,
+				FAA21C1D1766961400A5A65C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TwitterFriendsApp;
+			productName = TwitterFriendsApp;
+			productReference = FAA21C1F1766961400A5A65C /* TwitterFriendApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAA21C171766961400A5A65C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Courtney Ardis";
+			};
+			buildConfigurationList = FAA21C1A1766961400A5A65C /* Build configuration list for PBXProject "TwitterFriendsApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = FAA21C161766961400A5A65C;
+			productRefGroup = FAA21C201766961400A5A65C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAA21C1E1766961400A5A65C /* TwitterFriendsApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAA21C1D1766961400A5A65C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA21C2D1766961400A5A65C /* InfoPlist.strings in Resources */,
+				FAA21C351766961400A5A65C /* Default.png in Resources */,
+				FAA21C371766961400A5A65C /* Default@2x.png in Resources */,
+				FAA21C391766961400A5A65C /* Default-568h@2x.png in Resources */,
+				FAA21C3F1766961400A5A65C /* ViewController.xib in Resources */,
+				FAA21C4917669FF000A5A65C /* CustomCollectionCellViewController.xib in Resources */,
+				FAA21C5D1766DBC400A5A65C /* twitterFriendsLogo.png in Resources */,
+				FAA21C611766DCE700A5A65C /* twitterFriendsLogo_small.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAA21C1B1766961400A5A65C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAA21C2F1766961400A5A65C /* main.m in Sources */,
+				FAA21C331766961400A5A65C /* AppDelegate.m in Sources */,
+				FAA21C3C1766961400A5A65C /* ViewController.m in Sources */,
+				FAA21C4C1766A0DE00A5A65C /* CustomCollectionCellView.m in Sources */,
+				FAA21C5B1766C65A00A5A65C /* FollowerInfo.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAA21C2B1766961400A5A65C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA21C2C1766961400A5A65C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FAA21C3D1766961400A5A65C /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAA21C3E1766961400A5A65C /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAA21C401766961400A5A65C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FAA21C411766961400A5A65C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAA21C431766961400A5A65C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TwitterFriendsApp/TwitterFriendsApp-Prefix.pch";
+				INFOPLIST_FILE = "TwitterFriendsApp/TwitterFriendsApp-Info.plist";
+				PRODUCT_NAME = TwitterFriendApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FAA21C441766961400A5A65C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TwitterFriendsApp/TwitterFriendsApp-Prefix.pch";
+				INFOPLIST_FILE = "TwitterFriendsApp/TwitterFriendsApp-Info.plist";
+				PRODUCT_NAME = TwitterFriendApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAA21C1A1766961400A5A65C /* Build configuration list for PBXProject "TwitterFriendsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA21C401766961400A5A65C /* Debug */,
+				FAA21C411766961400A5A65C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAA21C421766961400A5A65C /* Build configuration list for PBXNativeTarget "TwitterFriendsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAA21C431766961400A5A65C /* Debug */,
+				FAA21C441766961400A5A65C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAA21C171766961400A5A65C /* Project object */;
+}
