@@ -61,7 +61,8 @@
                         if(currentAccount != nil)
                         {
                             //string for NSURL in SLRequest
-                            NSString *userProfileString = @"https://api.twitter.com/1.1/users/show.json?screen_name=irishpeace";
+                            NSString *userProfileString = [NSString stringWithFormat:@"https://api.twitter.com/1.1/users/show.json?screen_name=%@", currentAccount.username];
+                            NSLog(@"Current Account:%@",currentAccount.username);
                             
                             //request URL
                             SLRequest *request = [SLRequest requestForServiceType:SLServiceTypeTwitter requestMethod:SLRequestMethodGET URL:[NSURL URLWithString:userProfileString] parameters:nil];
