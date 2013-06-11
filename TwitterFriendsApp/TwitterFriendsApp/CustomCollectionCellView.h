@@ -19,7 +19,5 @@
 
 -(void)refreshCellData:(UIImage*)image nameString:(NSString*)nameString;
 
-@property (nonatomic, strong)UIImageView *avatarImageView;
-@property (nonatomic, strong)UILabel *screenNameLabel;
 @property FollowerInfo *info;
 @end

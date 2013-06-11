@@ -19,6 +19,4 @@
     NSArray *followersArray;
 }
 
-@property (nonatomic, strong)NSMutableArray *infoStorage;
-
 @end
