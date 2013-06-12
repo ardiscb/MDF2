@@ -17,6 +17,8 @@
     NSString *name;
     NSMutableArray *infoStorage;
     NSArray *followersArray;
+    
+    UIAlertView *loadCollectionAlert;
 }
 
 @end

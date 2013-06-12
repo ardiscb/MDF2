@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA7652991767F118006C0756 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = FA7652981767F118006C0756 /* Reachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA76529B1767F1E2006C0756 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA76529A1767F1E2006C0756 /* SystemConfiguration.framework */; };
 		FAA21C231766961400A5A65C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA21C221766961400A5A65C /* UIKit.framework */; };
 		FAA21C251766961400A5A65C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA21C241766961400A5A65C /* Foundation.framework */; };
 		FAA21C271766961400A5A65C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAA21C261766961400A5A65C /* CoreGraphics.framework */; };
@@ -28,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA7652971767F118006C0756 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		FA7652981767F118006C0756 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		FA76529A1767F1E2006C0756 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FAA21C1F1766961400A5A65C /* TwitterFriendApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterFriendApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAA21C221766961400A5A65C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FAA21C241766961400A5A65C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -52,7 +57,7 @@
 		FAA21C591766C65A00A5A65C /* FollowerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FollowerInfo.h; sourceTree = "<group>"; };
 		FAA21C5A1766C65A00A5A65C /* FollowerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FollowerInfo.m; sourceTree = "<group>"; };
 		FAA21C5C1766DBC400A5A65C /* twitterFriendsLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterFriendsLogo.png; sourceTree = "<group>"; };
-		FAA21C601766DCE700A5A65C /* twitterFriendsLogo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = twitterFriendsLogo_small.png; path = ../twitterFriendsLogo_small.png; sourceTree = "<group>"; };
+		FAA21C601766DCE700A5A65C /* twitterFriendsLogo_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitterFriendsLogo_small.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA76529B1767F1E2006C0756 /* SystemConfiguration.framework in Frameworks */,
 				FAA21C581766AF3600A5A65C /* Accounts.framework in Frameworks */,
 				FAA21C561766AF3100A5A65C /* Social.framework in Frameworks */,
 				FAA21C231766961400A5A65C /* UIKit.framework in Frameworks */,
@@ -91,6 +97,7 @@
 		FAA21C211766961400A5A65C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA76529A1767F1E2006C0756 /* SystemConfiguration.framework */,
 				FAA21C571766AF3600A5A65C /* Accounts.framework */,
 				FAA21C551766AF3100A5A65C /* Social.framework */,
 				FAA21C221766961400A5A65C /* UIKit.framework */,
@@ -103,6 +110,8 @@
 		FAA21C281766961400A5A65C /* TwitterFriendsApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA7652971767F118006C0756 /* Reachability.h */,
+				FA7652981767F118006C0756 /* Reachability.m */,
 				FAA21C601766DCE700A5A65C /* twitterFriendsLogo_small.png */,
 				FAA21C5C1766DBC400A5A65C /* twitterFriendsLogo.png */,
 				FAA21C311766961400A5A65C /* AppDelegate.h */,
@@ -169,6 +178,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = FAA21C161766961400A5A65C;
 			productRefGroup = FAA21C201766961400A5A65C /* Products */;
@@ -208,6 +218,7 @@
 				FAA21C3C1766961400A5A65C /* ViewController.m in Sources */,
 				FAA21C4C1766A0DE00A5A65C /* CustomCollectionCellView.m in Sources */,
 				FAA21C5B1766C65A00A5A65C /* FollowerInfo.m in Sources */,
+				FA7652991767F118006C0756 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +342,7 @@
 				FAA21C441766961400A5A65C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
