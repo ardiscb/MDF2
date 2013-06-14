@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import <Social/Social.h>
 #import <Accounts/Accounts.h>
+#import "FollowerInfo.h"
 
-@interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
+@interface ViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
 {
     IBOutlet UICollectionView *friendsCollectionView;
     NSDictionary *friendsDictionary;
@@ -19,6 +20,9 @@
     NSArray *followersArray;
     
     UIAlertView *loadCollectionAlert;
+    
+    FollowerInfo *info;
 }
 
+@property FollowerInfo *info;
 @end

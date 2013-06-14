@@ -10,6 +10,7 @@
 #import "CustomCollectionCellView.h"
 #import "FollowerInfo.h"
 #import "Reachability.h"
+#import "DetailViewController.h"
 #import <SystemConfiguration/SystemConfiguration.h>
 
 @interface ViewController ()
@@ -17,9 +18,11 @@
 @end
 
 @implementation ViewController
+@synthesize info;
 
 - (void)viewDidLoad
 {
+    //collection view load alert
     loadCollectionAlert = [[UIAlertView alloc] initWithTitle:@"Loading" message:@"Please wait while your twitter friends load." delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
     [loadCollectionAlert show];
     
@@ -32,12 +35,14 @@
         [loadCollectionAlert addSubview:indicator];
     }
     
+    //checks network connection
     Reachability *networkReachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [networkReachability currentReachabilityStatus];
     if (networkStatus == NotReachable)
     {
         NSLog(@"There IS NO internet connection");
-        UIAlertView *connectionAlert = [[UIAlertView alloc] initWithTitle:@"No network connection" message:@"Please check your wifi or data connection." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        //shows alert if no network connection is found
+        UIAlertView *connectionAlert = [[UIAlertView alloc] initWithTitle:@"No network connection" message:@"Please go to your device Settings and check your Wi-Fi or data connection." delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
         if(connectionAlert != nil)
         {
             [connectionAlert show];
@@ -87,24 +92,32 @@
                                                                                             error:nil];
                                             if(friendsDictionary != nil)
                                             {
+                                                //put user information in array
                                                 followersArray = [friendsDictionary objectForKey:@"users"];
                                                 NSLog(@"Followers Array:%@", followersArray);
+                                                //allocate mutable array for storing data
                                                 infoStorage = [[NSMutableArray alloc] init];
+                                                //for each user in the followers array
                                                 for (int i=0; i<[followersArray count]; i++)
                                                 {
+                                                    //store imageURL
                                                     NSString *imageURL = [[followersArray objectAtIndex:i] objectForKey:@"profile_image_url"];
                                                     NSLog(@"ImageURL: %@", imageURL);
+                                                    //store imageData from imageURL
                                                     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:imageURL]];
+                                                    //store screen name
                                                     NSString *twitterName = [[followersArray objectAtIndex:i] objectForKey:@"screen_name"];
+                                                    //store image in UIImage by using imageData
                                                     UIImage *image = [UIImage imageWithData:imageData];
-                                                    FollowerInfo *info = [[FollowerInfo alloc] initWithInfo:twitterName images:image];
+                                                    //store screen name and avatar image in FollowerInfo object
+                                                    info = [[FollowerInfo alloc] initWithInfo:twitterName images:image];
+                                                    //add information to object
                                                     [infoStorage addObject:info];
                                                     
                                                     //stop loading alert
                                                     [loadCollectionAlert dismissWithClickedButtonIndex:0 animated:YES];
                                                 }
                                                 //causes table view to trigger a reload
-                                                //doesn't load in new data on its own
                                                 [friendsCollectionView reloadData];
 
                                                 NSLog(@"Followers Array:%@", [followersArray description]);
@@ -154,13 +167,31 @@
     CustomCollectionCellView *cell = [friendsCollectionView dequeueReusableCellWithReuseIdentifier:@"CustomCell" forIndexPath:indexPath];
     if(cell != nil)
     {
-        FollowerInfo *info = [infoStorage objectAtIndex:indexPath.row];
+        //store information from mutable array(infoStorage) in info (object from FollowerInfo)
+        info = [infoStorage objectAtIndex:indexPath.row];
+        //add avatar an screen name to cells
         [cell refreshCellData:info.avatarImages nameString:info.screenNames];
         return cell;
 
         NSLog(@"Success!!");
     }
     return nil;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    //create detail view
+    DetailViewController *detailView = [[DetailViewController alloc] initWithNibName:@"DetailViewController" bundle:nil];
+    if(detailView != nil)
+    {
+        //store information from mutable array(info Storage in info(object from FollowerInfo)
+        info = [infoStorage objectAtIndex:indexPath.row];
+        //store information from info object to the detail view info variable
+        detailView.info = info;
+        //present detail modal view
+        [self presentViewController:detailView animated:true completion:nil];
+    }
+    
 }
 
 //optional
