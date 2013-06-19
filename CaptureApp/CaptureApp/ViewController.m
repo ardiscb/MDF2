@@ -9,6 +9,11 @@
 #import "ViewController.h"
 #import "ImageCaptureViewController.h"
 
+#define CAPTURE_PHOTO 0
+#define CAPTURE_VIDEO 1
+#define PHOTO_ALBUM 2
+
+
 @interface ViewController ()
 
 @end
@@ -24,18 +29,42 @@
 
 -(IBAction)onClick:(id)sender
 {
-    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
-    if(pickerController != nil)
+    UIButton *button = sender;
+    if (button.tag == CAPTURE_PHOTO)
     {
-        //choose source
-        //shows all albums
-        pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
-        //set up delegate
-        pickerController.delegate = self;
-        //set to true if you want to edit
-        pickerController.allowsEditing = true;
+        UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+        if(pickerController != nil)
+        {
+            //choose source
+            //shows camera capture
+            pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+            //set up delegate
+            pickerController.delegate = self;
+            //set to true - allows edit
+            pickerController.allowsEditing = true;
+            
+            [self presentViewController:pickerController animated:true completion:nil];
+        }
+    }
+    else if (button.tag == CAPTURE_VIDEO)
+    {
         
-        [self presentViewController:pickerController animated:true completion:nil];
+    }
+    else if (button.tag == PHOTO_ALBUM)
+    {
+        UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+        if(pickerController != nil)
+        {
+            //choose source
+            //shows photo album
+            pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+            //set up delegate
+            pickerController.delegate = self;
+            //set false - no editting
+            pickerController.allowsEditing = false;
+            
+            [self presentViewController:pickerController animated:true completion:nil];
+        }
     }
 }
 
