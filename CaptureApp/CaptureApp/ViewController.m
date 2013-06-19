@@ -8,11 +8,12 @@
 
 #import "ViewController.h"
 #import "ImageCaptureViewController.h"
+#import "MovieCaptureViewController.h"
+#import <MobileCoreServices/MobileCoreServices.h>
 
 #define CAPTURE_PHOTO 0
 #define CAPTURE_VIDEO 1
 #define PHOTO_ALBUM 2
-
 
 @interface ViewController ()
 
@@ -48,7 +49,22 @@
     }
     else if (button.tag == CAPTURE_VIDEO)
     {
-        
+        UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+        if(pickerController != nil)
+        {
+            //set source to camera
+            pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
+            //set delegate
+            pickerController.delegate = self;
+            //set editing to true
+            pickerController.allowsEditing = false;
+            //set video quality
+            pickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
+            //set media types
+            pickerController.mediaTypes = [NSArray arrayWithObjects:(NSString*)kUTTypeMovie, nil];
+            
+            [self presentViewController:pickerController animated:true completion:nil];
+        }
     }
     else if (button.tag == PHOTO_ALBUM)
     {
@@ -71,16 +87,34 @@
 // user selected an image
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    ImageCaptureViewController *captureView = [[ImageCaptureViewController alloc] initWithNibName:@"ImageCaptureViewController" bundle:nil];
-    if(captureView != nil)
+    //stores media type in string
+    NSString *mediaType = [info objectForKey:UIImagePickerControllerMediaType];
+    //if media type is image
+    if([mediaType isEqualToString:@"public.image"])
     {
-        //log information from dictionary (info)
-        NSLog(@"Info = %@", [info description]);
-        //set info from captureView to info objects in this method
-        captureView.info = info;
-        //open picker
-        [picker presentViewController:captureView animated:true completion:nil];
+        ImageCaptureViewController *captureView = [[ImageCaptureViewController alloc] initWithNibName:@"ImageCaptureViewController" bundle:nil];
+        if(captureView != nil)
+        {
+            //log information from dictionary (info)
+            NSLog(@"Info = %@", [info description]);
+            //set info from captureView to info objects in this method
+            captureView.info = info;
+            //open picker
+            [picker presentViewController:captureView animated:true completion:nil];
+        }
     }
+    //if media type is movie
+    else if([mediaType isEqualToString:@"public.movie"])
+    {
+        MovieCaptureViewController *movieView = [[MovieCaptureViewController alloc] initWithNibName:@"MovieCaptureViewController" bundle:nil];
+        if(movieView != nil)
+        {
+            NSLog(@"Movie Info = %@", info);
+            movieView.info = info;
+            [picker presentViewController:movieView animated:true completion:nil];
+        }
+    }
+
 }
 
 - (void)didReceiveMemoryWarning

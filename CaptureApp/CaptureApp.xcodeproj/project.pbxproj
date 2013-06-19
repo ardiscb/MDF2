@@ -22,6 +22,12 @@
 		FA0B26821771055700838C3B /* ImageCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0B26801771055700838C3B /* ImageCaptureViewController.xib */; };
 		FA0B26861771423F00838C3B /* AlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B26841771423F00838C3B /* AlbumViewController.m */; };
 		FA0B26871771423F00838C3B /* AlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0B26851771423F00838C3B /* AlbumViewController.xib */; };
+		FA0B268B177266E600838C3B /* MovieCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA0B2689177266E600838C3B /* MovieCaptureViewController.m */; };
+		FA0B268C177266E600838C3B /* MovieCaptureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA0B268A177266E600838C3B /* MovieCaptureViewController.xib */; };
+		FA0B2690177269C600838C3B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA0B268F177269C600838C3B /* MobileCoreServices.framework */; };
+		FA0B26941772799000838C3B /* book.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0B26911772799000838C3B /* book.png */; };
+		FA0B26951772799000838C3B /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0B26921772799000838C3B /* camera.png */; };
+		FA0B26961772799000838C3B /* movie.png in Resources */ = {isa = PBXBuildFile; fileRef = FA0B26931772799000838C3B /* movie.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +53,14 @@
 		FA0B26831771423F00838C3B /* AlbumViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewController.h; sourceTree = "<group>"; };
 		FA0B26841771423F00838C3B /* AlbumViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewController.m; sourceTree = "<group>"; };
 		FA0B26851771423F00838C3B /* AlbumViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AlbumViewController.xib; sourceTree = "<group>"; };
+		FA0B2688177266E600838C3B /* MovieCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCaptureViewController.h; sourceTree = "<group>"; };
+		FA0B2689177266E600838C3B /* MovieCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCaptureViewController.m; sourceTree = "<group>"; };
+		FA0B268A177266E600838C3B /* MovieCaptureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCaptureViewController.xib; sourceTree = "<group>"; };
+		FA0B268D1772696800838C3B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		FA0B268F177269C600838C3B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FA0B26911772799000838C3B /* book.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = book.png; sourceTree = "<group>"; };
+		FA0B26921772799000838C3B /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
+		FA0B26931772799000838C3B /* movie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = movie.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0B2690177269C600838C3B /* MobileCoreServices.framework in Frameworks */,
 				FA0B265C176FBB2600838C3B /* UIKit.framework in Frameworks */,
 				FA0B265E176FBB2600838C3B /* Foundation.framework in Frameworks */,
 				FA0B2660176FBB2600838C3B /* CoreGraphics.framework in Frameworks */,
@@ -83,6 +98,8 @@
 		FA0B265A176FBB2600838C3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA0B268F177269C600838C3B /* MobileCoreServices.framework */,
+				FA0B268D1772696800838C3B /* CoreMedia.framework */,
 				FA0B265B176FBB2600838C3B /* UIKit.framework */,
 				FA0B265D176FBB2600838C3B /* Foundation.framework */,
 				FA0B265F176FBB2600838C3B /* CoreGraphics.framework */,
@@ -93,6 +110,9 @@
 		FA0B2661176FBB2600838C3B /* CaptureApp */ = {
 			isa = PBXGroup;
 			children = (
+				FA0B26911772799000838C3B /* book.png */,
+				FA0B26921772799000838C3B /* camera.png */,
+				FA0B26931772799000838C3B /* movie.png */,
 				FA0B266A176FBB2600838C3B /* AppDelegate.h */,
 				FA0B266B176FBB2600838C3B /* AppDelegate.m */,
 				FA0B2673176FBB2600838C3B /* ViewController.h */,
@@ -101,6 +121,9 @@
 				FA0B267E1771055700838C3B /* ImageCaptureViewController.h */,
 				FA0B267F1771055700838C3B /* ImageCaptureViewController.m */,
 				FA0B26801771055700838C3B /* ImageCaptureViewController.xib */,
+				FA0B2688177266E600838C3B /* MovieCaptureViewController.h */,
+				FA0B2689177266E600838C3B /* MovieCaptureViewController.m */,
+				FA0B268A177266E600838C3B /* MovieCaptureViewController.xib */,
 				FA0B26831771423F00838C3B /* AlbumViewController.h */,
 				FA0B26841771423F00838C3B /* AlbumViewController.m */,
 				FA0B26851771423F00838C3B /* AlbumViewController.xib */,
@@ -181,6 +204,10 @@
 				FA0B2678176FBB2600838C3B /* ViewController.xib in Resources */,
 				FA0B26821771055700838C3B /* ImageCaptureViewController.xib in Resources */,
 				FA0B26871771423F00838C3B /* AlbumViewController.xib in Resources */,
+				FA0B268C177266E600838C3B /* MovieCaptureViewController.xib in Resources */,
+				FA0B26941772799000838C3B /* book.png in Resources */,
+				FA0B26951772799000838C3B /* camera.png in Resources */,
+				FA0B26961772799000838C3B /* movie.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +223,7 @@
 				FA0B2675176FBB2600838C3B /* ViewController.m in Sources */,
 				FA0B26811771055700838C3B /* ImageCaptureViewController.m in Sources */,
 				FA0B26861771423F00838C3B /* AlbumViewController.m in Sources */,
+				FA0B268B177266E600838C3B /* MovieCaptureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
