@@ -10,6 +10,7 @@
 #import "ImageCaptureViewController.h"
 #import "MovieCaptureViewController.h"
 #import <MobileCoreServices/MobileCoreServices.h>
+#import <QuartzCore/QuartzCore.h>
 
 #define CAPTURE_PHOTO 0
 #define CAPTURE_VIDEO 1
@@ -28,6 +29,16 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+   
+    instructionsView.layer.cornerRadius = 10;
+    [instructionsView.layer setShadowRadius:0.5f];
+    instructionsView.layer.shadowColor = [UIColor blackColor].CGColor;
+    instructionsView.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    instructionsView.layer.shadowOpacity = 1.0f;
+    instructionsView.layer.shadowRadius = 0.5f;
+}
 -(IBAction)onClick:(id)sender
 {
     UIButton *button = sender;

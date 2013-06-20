@@ -8,6 +8,7 @@
 
 #import "ImageCaptureViewController.h"
 #import "ViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 #define CANCEL_BTN 0
 #define SAVE_BTN 1
@@ -29,9 +30,9 @@
     }
     return self;
 }
-
 - (void)viewDidLoad
 {
+    
     NSLog(@"ImageCaptureView Info: %@", info);
     originalImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     if(originalImage != nil)
@@ -84,7 +85,7 @@
         NSLog(@"Save successful!");
         //alert when save is succesful
         
-        ///////ALERT DISPLAYS TWICE BECAUSE THIS METHOD IS CALLED TWICE /////////
+        ///////ALERT DISPLAYS TWICE BECAUSE THIS SELECTOR METHOD IS CALLED TWICE /////////
         /////////////////FIX FIX FIX FIX FIX FIX FIX FIX ////////////////////////
         UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved Successful" message:@"Your images have been saved successfully" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         if(saveAlert != nil)
@@ -92,7 +93,7 @@
             //show save alert
             [saveAlert show];
         }
-        //dismiss view after save
+        //present main view after save
         ViewController *mainView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
         [self presentViewController:mainView animated:true completion:nil];
     }

@@ -13,6 +13,7 @@
     IBOutlet UIButton *imageCaptureBtn;
     IBOutlet UIButton *movieCaptureBtn;
     IBOutlet UIButton *photoAlbumBtn;
+    IBOutlet UITextView *instructionsView;
 }
 
 @property (strong, nonatomic)UIImage *editedImage;
