@@ -67,7 +67,14 @@
 
         //save edited image
         UIImageWriteToSavedPhotosAlbum(editedImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
-
+        
+        //alert when save is succesful
+        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved Successful" message:@"Your images have been saved successfully" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        if(saveAlert != nil)
+        {
+            //show save alert
+            [saveAlert show];
+        }
     }
 }
 
@@ -78,21 +85,18 @@
     if(error != nil)
     {
         NSLog(@"Error = %@", error);
-    }
-    //else error is nil, no errors while saving
-    else
-    {
-        NSLog(@"Save successful!");
-        //alert when save is succesful
-        
-        ///////ALERT DISPLAYS TWICE BECAUSE THIS SELECTOR METHOD IS CALLED TWICE /////////
-        /////////////////FIX FIX FIX FIX FIX FIX FIX FIX ////////////////////////
-        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Saved Successful" message:@"Your images have been saved successfully" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        //alert when error occurs
+        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"An error has occured while saving your images." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
         if(saveAlert != nil)
         {
             //show save alert
             [saveAlert show];
         }
+    }
+    //else error is nil, no errors while saving
+    else
+    {
+        NSLog(@"Save successful!");
         //present main view after save
         ViewController *mainView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
         [self presentViewController:mainView animated:true completion:nil];
