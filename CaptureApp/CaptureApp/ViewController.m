@@ -38,6 +38,11 @@
     instructionsView.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
     instructionsView.layer.shadowOpacity = 1.0f;
     instructionsView.layer.shadowRadius = 0.5f;
+    
+    //set opacity to 80% for buttons
+    [imageCaptureBtn setAlpha:0.8];
+    [movieCaptureBtn setAlpha:0.8];
+    [photoAlbumBtn setAlpha:0.8];
 }
 -(IBAction)onClick:(id)sender
 {

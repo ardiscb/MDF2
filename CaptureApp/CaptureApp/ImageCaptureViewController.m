@@ -86,11 +86,11 @@
     {
         NSLog(@"Error = %@", error);
         //alert when error occurs
-        UIAlertView *saveAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"An error has occured while saving your images." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-        if(saveAlert != nil)
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"An error has occured while saving your images." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        if(errorAlert != nil)
         {
             //show save alert
-            [saveAlert show];
+            [errorAlert show];
         }
     }
     //else error is nil, no errors while saving

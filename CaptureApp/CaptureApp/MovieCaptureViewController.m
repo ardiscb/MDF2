@@ -64,6 +64,12 @@
     if(error != nil)
     {
         NSLog(@"Error = %@", error);
+        UIAlertView *errorAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"An error has occured while saving your images." delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        if(errorAlert != nil)
+        {
+            //show save alert
+            [errorAlert show];
+        }
     }
     //else error is nil, no errors while saving
     else
