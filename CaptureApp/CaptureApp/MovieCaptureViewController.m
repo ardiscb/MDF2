@@ -44,14 +44,14 @@
     }
     if(button.tag == SAVE_BTN)
     {
-        //save original image
-        //UIImageWriteToSavedPhotosAlbum(originalImage, self, @selector(image:didFinishSavingWithError:contextInfo:), nil);
+        //store media URL in a string
         NSURL *urlString = [info valueForKey:UIImagePickerControllerMediaURL];
         if(urlString != nil)
         {
+            //store the exact path in a string
             NSString *videoPath = [urlString path];
             NSLog(@"Video Path = %@", videoPath);
-            
+            //save video path to photo album
             UISaveVideoAtPathToSavedPhotosAlbum(videoPath, self, @selector(video:didFinishSavingWithError:contextInfo:), nil);
         }
     }
@@ -82,7 +82,7 @@
             //show save alert
             [saveAlert show];
         }
-        //dismiss view after save
+        //present main view after save
         ViewController *mainView = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
         [self presentViewController:mainView animated:true completion:nil];
     }
@@ -90,6 +90,7 @@
 // user selected cancel button
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
+    //dismiss view
     [picker dismissViewControllerAnimated:true completion:nil];
 }
 

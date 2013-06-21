@@ -34,6 +34,7 @@
 {
     
     NSLog(@"ImageCaptureView Info: %@", info);
+    //get original image selected
     originalImage = [info objectForKey:@"UIImagePickerControllerOriginalImage"];
     if(originalImage != nil)
     {
@@ -41,6 +42,7 @@
         originalImageView.image = originalImage;
         
     }
+    //get edited image
     editedImage = [info objectForKey:@"UIImagePickerControllerEditedImage"];
     if (editedImage != nil)
     {
@@ -105,6 +107,7 @@
 // user selected cancel button
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
+    //dismiss picker
     [picker dismissViewControllerAnimated:true completion:nil];
 }
 - (void)didReceiveMemoryWarning

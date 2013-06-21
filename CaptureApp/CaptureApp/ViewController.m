@@ -31,7 +31,7 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-   
+    //style textView that holds instructions on main view
     instructionsView.layer.cornerRadius = 10;
     [instructionsView.layer setShadowRadius:0.5f];
     instructionsView.layer.shadowColor = [UIColor blackColor].CGColor;
@@ -39,7 +39,7 @@
     instructionsView.layer.shadowOpacity = 1.0f;
     instructionsView.layer.shadowRadius = 0.5f;
     
-    //set opacity to 80% for buttons
+    //set opacity to 80% for buttons to make semi-transparent
     [imageCaptureBtn setAlpha:0.8];
     [movieCaptureBtn setAlpha:0.8];
     [photoAlbumBtn setAlpha:0.8];
@@ -53,7 +53,7 @@
         if(pickerController != nil)
         {
             //choose source
-            //shows camera capture
+            //shows camera for capturing images
             pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
             //set up delegate
             pickerController.delegate = self;
@@ -68,7 +68,7 @@
         UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
         if(pickerController != nil)
         {
-            //set source to camera
+            //set source to camera for capturing video
             pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
             //set delegate
             pickerController.delegate = self;
@@ -88,7 +88,7 @@
         if(pickerController != nil)
         {
             //choose source
-            //shows photo album
+            //set source to photo library to show all photo albums
             pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             //set up delegate
             pickerController.delegate = self;
@@ -113,7 +113,7 @@
         {
             //log information from dictionary (info)
             NSLog(@"Info = %@", [info description]);
-            //set info from captureView to info objects in this method
+            //set info variable from captureView to info objects in this method
             captureView.info = info;
             //open picker
             [picker presentViewController:captureView animated:true completion:nil];
@@ -126,7 +126,9 @@
         if(movieView != nil)
         {
             NSLog(@"Movie Info = %@", info);
+            //set info variable from movieView to info objects in this method
             movieView.info = info;
+            //open picker
             [picker presentViewController:movieView animated:true completion:nil];
         }
     }
